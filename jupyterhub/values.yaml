@@ -392,8 +392,8 @@ singleuser:
     homeMountPath: /home/jovyan
     dynamic:
       storageClass:
-      pvcNameTemplate: claim-{username}{servername}
-      volumeNameTemplate: volume-{username}{servername}
+      pvcNameTemplate: claim-{username}--{servername}
+      volumeNameTemplate: volume-{username}--{servername}
       storageAccessModes: [ReadWriteOnce]
   image:
     name: quay.io/jupyterhub/k8s-singleuser-sample
